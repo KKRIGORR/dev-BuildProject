@@ -15,20 +15,66 @@
     text-align: center;
 }
 
-.floor-path {
-    fill: #05FFFF;
-    stroke: #005252;
-    stroke-width: 2px;
-    fill-opacity: 0;
-    stroke-opacity: 0;
-    transition: .2s;
-    cursor: pointer;
-
+.flat {
+    &.active {
+        .flat-path {
+            fill: #05FFFF;
+            stroke: #005252;
+            fill-opacity: 0.5;
+            stroke-opacity: 0.7;
+        } 
+    }
     &:hover {
-        fill-opacity: 0.5;
-        stroke-opacity: 0.7;
+        .flat-path {
+            fill-opacity: 0.5;
+            stroke-opacity: 0.7;
+        }
+    }
+
+    &-path {
+        fill: #05FFFF;
+        stroke: #005252;
+        stroke-width: 2px;
+        fill-opacity: 0;
+        stroke-opacity: 0;
+        transition: .2s;
+        cursor: pointer;
+    }
+    .status {
+        cursor: pointer;
     }
 }
+
+
+.flat.booking {
+    .flat-path {
+        fill: #6B68FF;
+        stroke: #312df6;
+    }
+}
+
+.flat.sold {
+    .flat-path {
+        fill: #D34E4E;
+        stroke: #f11515;
+        cursor: no-drop;
+    }
+}
+
+.flat.free {
+    .flat-path {
+        fill: #00DEFC;
+        stroke: #008fa1;
+    }
+}
+
+.flat.action {
+    .flat-path {
+        fill: #80D34E;
+        stroke: #1d471d;
+    }
+}
+
 
 .status-cell {
     stroke: black;
